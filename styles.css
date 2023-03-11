@@ -1,0 +1,168 @@
+/* Rest */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    --body-bg: hsl(204, 43%, 93%);
+    --text-community: hsl(218, 22%, 67%);
+}
+
+body {
+    display: grid;
+    grid:
+    "main"
+    "footer"
+    /.83fr;
+    place-content: center;
+    background-color: var(--body-bg);
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid:
+    "join"
+    "subscription"
+    "why"
+    / 1fr;
+    place-content: center;
+}
+
+section {
+    padding: 1.25rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+h2 {
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+h3 {
+    font-size: .9rem;
+    line-height: 1.25rem;
+    padding-bottom: 1.1rem;
+}
+
+p {
+    font-size: .9rem;
+}
+
+.join{
+    grid-area: join;
+    background-color: white;
+    border-radius: .5rem .5rem 0rem 0rem;
+}
+
+.join h2 {
+    padding-top: .5rem;
+    color: var(--cyan);
+    padding-bottom: 1.55rem;
+}
+
+.join h3 {
+    color: var(--bright-yellow);
+}
+
+.join p {
+    color: var(--text-community);
+    line-height: 1.6rem;
+    padding-bottom: .75rem;
+}
+
+.subscription {
+    grid-area: subscription;
+    color: white;
+    background-color: var(--cyan);
+}
+
+.subscription h2 {
+    padding-bottom: 1.2rem;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom:.5rem;
+}
+
+.price {
+    font-size: 2rem;
+}
+
+.sub-freq {
+    color: hsl(179, 62%, 70%);
+}
+
+
+
+button {
+    background-color: var(--bright-yellow);
+    border: none;
+    color: white;
+    width: 15rem;
+    height: 3rem;
+    border-radius: .25rem;
+    box-shadow: .1rem .1rem 1rem hsl(179, 62%, 35%);
+    margin: 1.8rem 0rem .8rem 0rem;
+    font-weight: 700;
+}
+
+.why {
+    grid-area: why;
+    background-color: hsl(179, 62%, 47%);
+    color: white;
+    border-radius: 0rem 0rem .5rem .5rem;
+}
+
+.why h2 {
+    padding-bottom: 1rem;
+}
+ul {
+    padding-bottom: .4rem;
+}
+
+li {
+    list-style-type: none;
+    line-height: 1.3rem;
+    color: hsl(179, 62%, 85%);
+}
+
+footer {
+    grid-area: footer;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width 400px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    p {
+        font-size: .9rem;
+    }
+
+
+}
